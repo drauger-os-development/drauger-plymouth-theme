@@ -1,0 +1,11 @@
+[Plymouth Theme]
+Name=Drauger Theme
+Description=Boot up animation for Drauger OS
+ModuleName=two-step
+
+[two-step]
+ImageDir=/usr/share/plymouth/themes/drauger-theme
+HorizontalAlignment=.5
+VerticalAlignment=.5
+Transition=merge-fade
+TransitionDuration=.5
