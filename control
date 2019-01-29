@@ -1,0 +1,10 @@
+Package: drauger-plymouth-theme
+Version: 0.0.2
+Installed-Size: 64
+Maintainer: Thomas Castleman <draugeros@gmail.com>
+Section: 
+Architecture: all
+Priority: optional
+Depends: plymouth (>=0.9.3-1ubuntu7.18.04.1)
+Description: Plymouth theme for Drauger OS
+Simple loading animation for boot up and shut down on Drauger OS
