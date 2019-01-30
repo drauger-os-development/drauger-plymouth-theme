@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+case "${1}" in
+	configure)
+        update-alternatives \
+            --install /usr/share/plymouth/themes/default.plymouth default.plymouth \
+            /usr/share/plymouth/themes/drauger-theme/drauger-theme.plymouth 70
+
+		if which update-initramfs >/dev/null 2>&1; then
+			update-initramfs -u
+		fi
+		;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+
+		;;
+
+	*)
+		echo "postinst called with unknown argument \`${1}'" >&2
+		exit 1
+		;;
+esac
+exit 0
