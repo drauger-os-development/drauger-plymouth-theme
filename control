@@ -1,6 +1,6 @@
 Package: drauger-plymouth-theme
-Version: 0.0.3
-Maintainer: Thomas Castleman <draugeros@gmail.com>
+Version: 0.0.4
+Maintainer: Thomas Castleman <contact@draugeros.ml>
 Section: x11
 Homepage: https://github.com/Batcastle/drauger-plymouth-theme
 Architecture: all
