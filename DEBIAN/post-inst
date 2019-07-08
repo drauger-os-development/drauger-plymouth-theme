@@ -1,9 +1,10 @@
 #!/bin/sh
 set -e
 case "$1" in
-	configure)
+	configure|install)
 		#keep this sudo here. For some odd reason, it doesn't work without it.
 		sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/drauger-theme/drauger-theme.plymouth 100 --slave /usr/share/plymouth/themes/default.grub default.plymouth.grub /usr/share/plymouth/themes/drauger-theme/drauger-theme.grub
+		echo -e "\nIf you do not see drauger-theme in your options for default.plymouth when running:\n\n\tsudo update-alternatives --config default.plymouth\n\nPlease run this command manually:\n\n\tsudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/drauger-theme/drauger-theme.plymouth 100 --slave /usr/share/plymouth/themes/default.grub default.plymouth.grub /usr/share/plymouth/themes/drauger-theme/drauger-theme.grub\n\n"
 		if which update-initramfs >/dev/null 2>&1; then
 			update-initramfs -u
 		fi
