@@ -170,7 +170,7 @@ fun StringToInteger (str) {
 # Previous background colour
 # To change these to whatever color you want, get the RGB code for the color you want,
 # then divide each of the 3 integers by 255
-# #222222 --> 0.13, 0.13, 0.13 
+# #222222 --> 34, 34, 34 --> (round to nearest hundreth) --> 0.13, 0.13, 0.13 
 # New background colour
 #
 Window.SetBackgroundTopColor (0.13, 0.13, 0.13);     # Nice colour on top of the screen fading to
