@@ -173,9 +173,9 @@ fun StringToInteger (str) {
 # #222222 --> 34, 34, 34 --> (round to nearest hundreth) --> 0.13, 0.13, 0.13 
 # New background colour
 #
-Window.SetBackgroundTopColor (0.13, 0.13, 0.13);     # Nice colour on top of the screen fading to
+Window.SetBackgroundTopColor (0, 0, 0);     # Nice colour on top of the screen fading to
 # set both identical color to override fade
-Window.SetBackgroundBottomColor (0.13, 0.13, 0.13);  # an equally nice colour on the bottom
+Window.SetBackgroundBottomColor (0, 0, 0);  # an equally nice colour on the bottom
 
 bits_per_pixel = Window.GetBitsPerPixel ();
 if (bits_per_pixel == 4) {
