@@ -1,12 +1,14 @@
 Package: drauger-plymouth-theme
-Version: 0.1.4
+Version: 0.2.0
 Maintainer: Thomas Castleman <batcastle@draugeros.org>
 Section: misc
 Homepage: https://github.com/drauger-os-development/drauger-plymouth-theme
 Architecture: all
 Provides: plymouth-theme
 Priority: optional
-Depends: plymouth (>= 0.9.4), plymouth-label (>= 0.9.4)
+Depends: plymouth (>= 0.9.4), plymouth-label (>= 0.9.4), plymouth-theme-ubuntu-text
+Breaks: plymouth (<< 0.9.3)
+Replaces: plymouth-theme-drauger-text
 Description: Plymouth theme for Drauger OS
  Simple loading animation for boot up and shut down on Drauger OS
 

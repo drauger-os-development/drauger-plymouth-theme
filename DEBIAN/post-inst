@@ -4,17 +4,17 @@ case "$1" in
 	configure|install)
 		#keep this sudo here. For some odd reason, it doesn't work without it.
 		sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/drauger-theme/drauger-theme.plymouth 100 --slave /usr/share/plymouth/themes/default.grub default.plymouth.grub /usr/share/plymouth/themes/drauger-theme/drauger-theme.grub
-		echo -e "\nIf you do not see drauger-theme in your options for default.plymouth when running:\n\n\tsudo update-alternatives --config default.plymouth\n\nPlease run this command manually:\n\n\tsudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/drauger-theme/drauger-theme.plymouth 100 --slave /usr/share/plymouth/themes/default.grub default.plymouth.grub /usr/share/plymouth/themes/drauger-theme/drauger-theme.grub\n\n"
+		sudo update-alternatives --install /usr/share/plymouth/themes/text.plymouth text.plymouth /usr/share/plymouth/themes/drauger-text/drauger-text.plymouth 100
 		if which update-initramfs >/dev/null 2>&1; then
 			update-initramfs -u
 		fi
-		;;
+	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure) ;;
 
 	*)
-		echo "postinst called with unknown argument \`$1'" >&2
+		echo "$0 called with unknown argument \`$1'" >&2
 		exit 1
-		;;
+	;;
 esac
 exit 0

@@ -1,7 +1,0 @@
-drauger-plymouth-theme (0.0.9) bionic; urgency=medium
-
-  * Changed grub-to-initramfs screen color from purple-ish to gray-ish
-  * Added notice on installa/update about the package not always formatting right on install
-  * updated some of the comments in plymouth script
-
- -- Thomas Castleman <contact@draugeros.org>  Mon, 08 Jul 2019 01:42:10 -0500
